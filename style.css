@@ -10,17 +10,20 @@
     font-style: normal;
     font-size: 16px;
 }
+/* navbar start */
 .navbar{
     display: flex;
     justify-content: space-evenly;
     margin-top: 2%;
+    height: 8vh;
+    align-items: center;
 }
-.navbar:nth-child(1){
+.navbar img:nth-child(1){
     height: 6vh;
 }
 .navBarUl{
     /* border: 2px solid; */
-    width:45% ;
+    width:45%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -47,30 +50,154 @@
 .navbar .child_span img:active{
     transform: translateX(36px);
 }
-.subSection2{
-    margin-top: 10vh;
+/* responsiveness of navbar */
+@media only screen and (max-width:1100px){
+    .navbar{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 2%;
+        height: 8vh;
+        align-items: center;
+    }
+    .navbar img:nth-child(1){
+        height: 6vh;
+    }
+    .navBarUl{
+        /* border: 2px solid; */
+        width:45%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .navBarUl li{
+     list-style-type: none;
+    }
+    .navbar .child_span{
+        width: 6vw;
+        height: 5vh;
+        border: 2px solid;
+        overflow:hidden;
+        background-color: black;
+        border-radius: 20px;
+    }
+    .navbar .child_span img{
+        height: 100%;
+        object-fit:cover;
+        border-radius: 50%;
+        transition:all;
+        transition-duration: 200ms;
+    
+    }
+    .navbar .child_span img:active{
+        transform: translateX(36px);
+    }
+    
+ }
+
+/* section2 ka subsection1 start */
+.subSection1{
+    margin-top: 12vh;
     row-gap: 5vh;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(to top,#eeebff,transparent);
 }
-.subSection2 p{
+.subSection1 h1:nth-child(1){
+    font-size: 80px;
+    font-weight: 700;
+    background: linear-gradient(106deg,var(--themeColor),#6bdcff);
+    color: transparent;
+    -webkit-background-clip:text;
+
+}
+.subSection1 p{
     width: 60%;
+    font-size: 20px;
 }
-.subSection2 .fields{
+#JobInput{
+    width: 40%;
+    padding: 8px 8px;  
+    background-color:#eff1ff;
+    border: 1.5px solid;
+}
+#JobInput:focus{
+    border: 2px solid;
+}
+.subSection1 input[type="button"]{
+color: white;
+background-color: var(--themeColor);
+width: 10%;
+height: 7vh;
+border-radius: 20px;
+font-weight: 600;
+border: none;
+transition-property: background-color;
+/* transition-timing-function: ease; */
+transition-duration: 2s;
+} 
+.subSection1 input[type="button"]:hover{
+    background-color: #372c81;
+}
+#ps{
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color:var(--themeColor);
+    /* background-image: url('./assets/hiring mine bg purple image.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    /* background: linear-gradient(106deg,var(--themeColor),#6bdcff); */
+    /* -webkit-background-clip:text;   */
+}
+
+.subSection1 .fields{
     width: 60%;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
 }
-.subSection2 .fields a{
+.subSection1 .fields a{
     text-decoration-line: none ;
     font-weight: 600;
     color: var(--themeColor);
-    font-size: 17px;
+    font-size: 16px;
     border: 0.8px solid var(--themeColor);
     border-radius: 8px;
-    padding: 0.8%;
+    padding: 0.8% 1.2%;
+}
+.subSection1 .fields a:hover{
+    background-color:#dcd8ff;
+}
+/* section3 */
+.section3{
+width: 100%;
+height: 50vh;
+background-image: linear-gradient(to top,transparent 60%,#eeebff),url(./assets/bg\ image.png);
+background-size: 100% 100%;
+background-position: center;
+background-repeat: no-repeat;
+}
+/* @media only screen and () */
+
+.section4{
+    /* width: 100%; */
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section4 h1 *{
+    padding-top: 9%;
+    text-transform: capitalize;
+    /* color: var(--themeColor); */
+    font-size: 48px;
+    font-weight: 600;
+}
+.section4 div{
+    font-size: 20px;
 }
